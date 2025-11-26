@@ -1,0 +1,25 @@
+#+title: Personal CS2 configuration
+
+* Info
+A tiny project to generate and install my CS2 configuration
+
+
+* Commands
+** Build
+#+begin_src fish
+  make build
+#+end_src
+
+** Install
+#+begin_src fish
+  make export
+#+end_src
+
+
+* Project
+** TODO Make having location/machine specific configuration possible
+
+Currently I'm hard-coding machine specific configuration,
+- [[./autoexec/8-location-pirque.cfg]]
+  - ~mm_dedicated_search_maxping 25~ is location-specific
+  - ~fps_max 242~ is machine-specific
