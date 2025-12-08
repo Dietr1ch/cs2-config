@@ -1,12 +1,16 @@
 SRCS := $(wildcard autoexec/*.cfg)
+STEAM_LIBRARY ?= ~/.local/share/Steam
 
 build: $(SRCS)
-	echo "Running 'make build' at `pwd`"
+	echo "Running 'make build' at $(pwd)"
+
 	echo "Rebuilding 'autoexec.cfg' from [$(SRCS)]..."
 	cat $(SRCS) > autoexec.cfg
 
 export: build
-	cp autoexec.cfg ~/.local/share/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/
+	echo "Exporting configuration to " $(STEAM_LIBRARY)
+
+	cp autoexec.cfg $(STEAM_LIBRARY)/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/
 	echo "Exported new 'autoexec.cfg'".
-	ls -l ~/.local/share/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/autoexec.cfg
-	bat ~/.local/share/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/autoexec.cfg
+	ls -l $(STEAM_LIBRARY)/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/autoexec.cfg
+	bat $(STEAM_LIBRARY)/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/autoexec.cfg

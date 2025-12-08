@@ -15,6 +15,18 @@ A tiny project to generate and install my CS2 configuration
   make export
 #+end_src
 
+*** Custom path
+
+#+begin_src fish
+STEAM_LIBRARY=/Data/Shared/Steam make export
+#+end_src
+
+* Launch options
+
+#+begin_src fish
+  gamemoderun %command% +exec autoexec.cfg -high -vulkan -sdlvideodriver wayland -sdlaudiodriver pipewire -novid -nojoy +cl_forcepreload 1 +cl_updaterate 128 +cl_interp 0 +cl_interp_ratio 1
+#+end_src
+
 
 * Project
 ** TODO Make having location/machine specific configuration possible
