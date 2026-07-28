@@ -13,4 +13,4 @@ export: build
 	cp autoexec.cfg $(STEAM_LIBRARY)/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/
 	echo "Exported new 'autoexec.cfg'".
 	ls -l $(STEAM_LIBRARY)/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/autoexec.cfg
-	bat $(STEAM_LIBRARY)/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/autoexec.cfg
+	cat $(STEAM_LIBRARY)/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/autoexec.cfg
