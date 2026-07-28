@@ -6,4 +6,7 @@
 				 (projectile-project-compilation-cmd . "make build")
 				 (projectile-project-install-cmd     . "make export")
 				 ))
+ (conf-mode . (
+							 (comment-start . "//")
+							 ))
  )
